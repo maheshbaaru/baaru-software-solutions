@@ -1,6 +1,6 @@
-# Baaru Solution — Angular
+# Baru Software Solutions — Angular
 
-A responsive Angular application for Baaru Solution, featuring IoT applications, website development and website maintenance services.
+A responsive Angular application for Baru Software Solutions, featuring IoT applications, website development, website maintenance and the TripBuddies in-house product.
 
 ## Stack
 - Angular 22 standalone components
