@@ -1,14 +1,39 @@
-# Baaru Solution website
+# Baaru Solution — Angular
 
-Responsive static website for IoT applications, website development and website maintenance.
+A responsive Angular application for Baaru Solution, featuring IoT applications, website development and website maintenance services.
+
+## Stack
+- Angular 22 standalone components
+- TypeScript, Angular Router and Reactive Forms
+- Responsive CSS
+- Vercel deployment configuration
 
 ## Run locally
-Open index.html or run `python -m http.server 8000`, then visit http://localhost:8000.
+Requirements: Node.js 22.22.3+ (or 24.15.0+) and npm.
 
-## Vercel deployment
-Import this repository into Vercel. Choose **Other** as framework preset. Leave the build command empty and set output directory to `.` (repository root).
+```bash
+npm install
+npm start
+```
 
-## Before publishing
-- Replace the placeholder `hello@baarusolution.com` in index.html and script.js with the real business email.
-- The contact form opens the visitor's email application; it does not store enquiries on a server. Connect a form service or API for online submissions.
-- Google Fonts are loaded from Google Fonts.
+Open the local URL printed by Angular CLI (normally http://localhost:4200).
+
+## Production build
+```bash
+npm run build
+```
+
+The browser build is generated at `dist/baaru-solution/browser`.
+
+## Deploy to Vercel
+Import this GitHub repository into Vercel and configure:
+- Framework preset: Angular
+- Build command: `npm run build`
+- Output directory: `dist/baaru-solution/browser`
+- Install command: `npm install`
+
+The included `vercel.json` rewrites client-side routes to the Angular entry point.
+
+## Before launch
+- Replace `hello@baarusolution.com` in `src/app/pages/landing-page.component.ts` and the contact section in `src/app/pages/landing-page.component.html` with the real business email.
+- The enquiry form validates fields and opens the visitor's email application. It does not store enquiries. Connect a backend/API or hosted form provider to collect enquiries online.
