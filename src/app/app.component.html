@@ -1,0 +1,32 @@
+<header class="site-header">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="Baaru Solution home">
+      <span class="brand-mark">B</span>
+      <span>baaru<span class="brand-light">solution</span><small>SOFTWARE &amp; IOT SERVICES</small></span>
+    </a>
+    <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle navigation">
+      {{ menuOpen() ? '×' : '☰' }}
+    </button>
+    <div class="nav-links" [class.open]="menuOpen()">
+      <a routerLink="/" fragment="services" (click)="closeMenu()">Services</a>
+      <a routerLink="/" fragment="about" (click)="closeMenu()">About</a>
+      <a routerLink="/" fragment="approach" (click)="closeMenu()">Why Baaru</a>
+      <a routerLink="/" fragment="contact" class="nav-cta" (click)="closeMenu()">Let's talk <span>↗</span></a>
+    </div>
+  </nav>
+</header>
+<router-outlet />
+<footer class="footer">
+  <div class="container footer-main">
+    <a class="brand footer-brand" routerLink="/">
+      <span class="brand-mark">B</span>
+      <span>baaru<span class="brand-light">solution</span><small>SOFTWARE &amp; IOT SERVICES</small></span>
+    </a>
+    <p>Thoughtful technology for a connected world.</p>
+    <a routerLink="/" fragment="home" class="back-top">Back to top ↑</a>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {{ currentYear }} Baaru Solution. All rights reserved.</span>
+    <span>IoT · Websites · Maintenance</span>
+  </div>
+</footer>
