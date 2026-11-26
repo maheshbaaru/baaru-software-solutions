@@ -9,6 +9,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  readonly currentYear = new Date().getFullYear();
   readonly menuOpen = signal(false);
 
   closeMenu(): void {
