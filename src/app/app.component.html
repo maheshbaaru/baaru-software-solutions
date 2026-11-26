@@ -1,8 +1,7 @@
 <header class="site-header">
   <nav class="nav container" aria-label="Main navigation">
     <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="Baru Software Solutions home">
-      <span class="brand-mark">B</span>
-      <span>baru<span class="brand-light">software solutions</span><small>SOFTWARE &amp; IOT SERVICES</small></span>
+      <img src="assets/baru-logo.svg" alt="Baru Software Solutions" />
     </a>
     <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle navigation">
       {{ menuOpen() ? '×' : '☰' }}
@@ -19,9 +18,8 @@
 <router-outlet />
 <footer class="footer">
   <div class="container footer-main">
-    <a class="brand footer-brand" routerLink="/">
-      <span class="brand-mark">B</span>
-      <span>baru<span class="brand-light">software solutions</span><small>SOFTWARE &amp; IOT SERVICES</small></span>
+    <a class="brand footer-brand" routerLink="/" aria-label="Baru Software Solutions home">
+      <img src="assets/baru-logo.svg" alt="Baru Software Solutions" />
     </a>
     <p>Thoughtful technology for a connected world.</p>
     <a routerLink="/" fragment="home" class="back-top">Back to top ↑</a>
